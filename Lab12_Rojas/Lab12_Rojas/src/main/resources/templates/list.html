@@ -1,0 +1,27 @@
+<html xmlns:th="https://www.thymeleaf.org">
+<link rel="stylesheet" th:href="@{/style.css}" />
+<head>
+<title>Aplicacio'n JPA - Lista de empleados</title>
+</head>
+<body>
+<h3>Lista de Empleados</h3>
+<table id="produ">
+      <tr>
+         <th>Codigo</th>
+         <th>Apellido</th>
+         <th>Nombre</th>
+         <th>Ocupaci'on</th>
+         <th>Sueldo</th>
+      </tr>
+    <th:block th:each="empld: ${empleados}">
+      <tr>
+         <td th:text="${empld.codigo}" ></td>
+         <td th:text="${empld.apellido}"></td>
+         <td th:text="${empld.nombre}"></td>
+         <td th:text="${empld.ocupacion}"></td>
+         <td th:text="${empld.sueldo}"></td>
+      </tr>
+    </th:block>
+</table>
+</body>
+</html>
